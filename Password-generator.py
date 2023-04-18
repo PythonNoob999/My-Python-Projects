@@ -28,6 +28,8 @@ if captial_or_small.lower() == 'captial':
 	
 else:
 	None
+
+# choosing random letters/nums/symbols
 	
 random_letter = random.choices(strings, k=letter)
 
@@ -36,7 +38,9 @@ random_num = random.choices(nums, k=num)
 
 random_symbol = random.choices(symbols, k=symbol)
 
+# Combine all the password parts into 1 variable and shuffling it
 random_password = random_letter +  random_num + random_symbol
 random.shuffle(random_password)
 
+# printing the password for the user using the .join method to remove any ' or [] in the original list
 print('' .join(random_password))
